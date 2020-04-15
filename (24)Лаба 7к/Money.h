@@ -12,7 +12,7 @@ public:
 	Money(const Money&);
 	Money& operator=(const Money&);
 	Money operator+(Money k);
-	//перегруженные операции ввода-вывода
+	//РїРµСЂРµРіСЂСѓР¶РµРЅРЅС‹Рµ РѕРїРµСЂР°С†РёРё РІРІРѕРґР°-РІС‹РІРѕРґР°
 	friend ostream& operator<< (ostream& out, const Money&);
 	friend istream& operator>> (istream& in, Money&);
 protected:
