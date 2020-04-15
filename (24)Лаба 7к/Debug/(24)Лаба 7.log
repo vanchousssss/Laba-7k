@@ -1,0 +1,5 @@
+﻿  Main.cpp
+C:\Users\Иван\OneDrive\Рабочий стол\(24)Лаба 7\Main.cpp(14,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+C:\Users\Иван\OneDrive\Рабочий стол\(24)Лаба 7\set.h(73): warning C4715: set<int>::operator[]: значение возвращается не при всех путях выполнения
+C:\Users\Иван\OneDrive\Рабочий стол\(24)Лаба 7\set.h(73): warning C4715: set<Money>::operator[]: значение возвращается не при всех путях выполнения
+  (24)Лаба 7.vcxproj -> C:\Users\Иван\OneDrive\Рабочий стол\(24)Лаба 7\Debug\(24)Лаба 7.exe
