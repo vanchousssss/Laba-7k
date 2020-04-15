@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 using namespace std;
-template <class T> //T - параметр шаблона
+template <class T> //T - РїР°СЂР°РјРµС‚СЂ С€Р°Р±Р»РѕРЅР°
 class set
 {
 public:
@@ -21,8 +21,8 @@ private:
 	T* data;
 };
 
-// опрeделение функций
-//конструктор с параметрами
+// РѕРїСЂeРґРµР»РµРЅРёРµ С„СѓРЅРєС†РёР№
+//РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
 template <class T>
 set<T>::set(int n, T k)
 {
@@ -32,7 +32,7 @@ set<T>::set(int n, T k)
 		data[i] = k;
 
 }
-//конструктор копирования
+//РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ
 template <class T>
 set<T>::set(const set& a)
 {
@@ -42,7 +42,7 @@ set<T>::set(const set& a)
 		data[i] = a.data[i];
 
 }
-//деструктор
+//РґРµСЃС‚СЂСѓРєС‚РѕСЂ
 template <class T>
 set<T>::~set()
 
@@ -50,7 +50,7 @@ set<T>::~set()
 	delete[]data;
 	data = 0;
 }
-//операция присваивания
+//РѕРїРµСЂР°С†РёСЏ РїСЂРёСЃРІР°РёРІР°РЅРёСЏ
 template <class T>
 set<T>& set<T>::operator=(const set<T>& a)
 {
@@ -64,21 +64,21 @@ set<T>& set<T>::operator=(const set<T>& a)
 		data[i] = a.data[i];
 	return *this;
 }
-//операция доступа по индексу
+//РѕРїРµСЂР°С†РёСЏ РґРѕСЃС‚СѓРїР° РїРѕ РёРЅРґРµРєСЃСѓ
 template <class T>
 T& set<T>::operator[](int index)
 {
 	if (index < elem) return data[index];
-	else cout << "\nОшибка: Индекс больше количества элементов";
+	else cout << "\nРћС€РёР±РєР°: РРЅРґРµРєСЃ Р±РѕР»СЊС€Рµ РєРѕР»РёС‡РµСЃС‚РІР° СЌР»РµРјРµРЅС‚РѕРІ";
 }
-//операция для поиска элемента
+//РѕРїРµСЂР°С†РёСЏ РґР»СЏ РїРѕРёСЃРєР° СЌР»РµРјРµРЅС‚Р°
 template <class T>
 set<T> set<T>::operator>(const T k)
 {
 	for (int i = elem; i > 0; i--)
 	{
 		if (k == data[i])
-			cout << "Элемент (4) найден в " <<i << "-ом случае\n"; 
+			cout << "Р­Р»РµРјРµРЅС‚ (4) РЅР°Р№РґРµРЅ РІ " <<i << "-РѕРј СЃР»СѓС‡Р°Рµ\n"; 
 	}
 	return *this;
 }
@@ -88,12 +88,12 @@ set<T> set<T>::operator<(const T k)
 	for (int i = elem; i > 0; i--)
 	{
 		if (k != data[i])
-			cout << "Элемент (4) не найден\n";
+			cout << "Р­Р»РµРјРµРЅС‚ (4) РЅРµ РЅР°Р№РґРµРЅ\n";
 	}
 	return *this;
 }
 
-//операции для ввода-вывода
+//РѕРїРµСЂР°С†РёРё РґР»СЏ РІРІРѕРґР°-РІС‹РІРѕРґР°
 template <class T>
 ostream& operator<< (ostream& out, const set<T>& a)
 {
@@ -109,7 +109,7 @@ istream& operator>> (istream& in, set<T>& a)
 	return in;
 }
 
-//проверка на равенство
+//РїСЂРѕРІРµСЂРєР° РЅР° СЂР°РІРµРЅСЃС‚РІРѕ
 template <class T>
 bool operator==(const set<T>& b1, const set<T>& b2)
 {
