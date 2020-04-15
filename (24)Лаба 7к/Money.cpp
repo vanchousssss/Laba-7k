@@ -33,8 +33,8 @@ ostream& operator<<(ostream& out, const Money& m)
 }
 istream& operator>>(istream& in, Money& m)
 {
-	cout << "\nÐóáëè: "; in >> m.rub;
-	cout << "\nÊîïåéêè: "; in >> m.kop;
+	cout << "\nÐ ÑƒÐ±Ð»Ð¸: "; in >> m.rub;
+	cout << "\nÐšÐ¾Ð¿ÐµÐ¹ÐºÐ¸: "; in >> m.kop;
 	return in;
 }
 Money Money::operator+(Money k)
